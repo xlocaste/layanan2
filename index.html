@@ -84,35 +84,6 @@
             <div class="flex items-center justify-center relative pt-10 md:pt-28 pr-0 md:pr-20 mt-4 md:mt-0">
                 <img src="Produk/Vector1.png" alt="Descriptive Alt Text" class="absolute right-0 top-0 object-cover h-full w-full" style="z-index: 0; width: 75%; height: auto;">
                 <img src="Produk/Vector.png" alt="Descriptive Alt Text" class="relative object-cover h-full rounded-lg" style="z-index: 1; width: 80%; height: auto;">
-                <!-- NOTIFIKASI -->
-                <div id="notification" class="hidden fixed top-16 right-20 bg-white z-50 shadow rounded-lg mb-6 p-4 mx-auto md:ml-auto md:mr-12 w-11/12 md:w-1/2">
-                    <div id="notification" data-action="show">
-                        <p class="text-2xl mb-4 text-teal-700">Products</p>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                            <div class="flex flex-col items-start">
-                                <div class="flex items-center space-x-2">
-                                    <img src="Produk/Rectangle 110.jpg" alt="Product Image" class="w-10 h-10 object-cover rounded-full"> 
-                                    <h3 class="text-black">Suppliable</h3>
-                                </div>
-                                <p class="text-gray-600">Selesaikan dan Hemat waktu dengan olah inventaris dan stok.</p>
-                            </div>
-                            <div class="flex flex-col items-start">
-                                <div class="flex items-center space-x-2">
-                                    <img src="Produk/Rectangle 110.jpg" alt="Product Image" class="w-10 h-10 object-cover rounded-full">
-                                    <h3 class="text-black">Suppliable</h3>
-                                </div>
-                                <p class="text-gray-600">Selesaikan dan Hemat waktu dengan olah inventaris dan stok.</p>
-                            </div>
-                            <div class="flex flex-col items-start">
-                                <div class="flex items-center space-x-2">
-                                    <img src="Produk/Rectangle 110.jpg" alt="Product Image" class="w-10 h-10 object-cover rounded-full">
-                                    <h3 class="text-black">Suppliable</h3>
-                                </div>
-                                <p class="text-gray-600">Selesaikan dan Hemat waktu dengan olah inventaris dan stok.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>                               
         </div>
     
@@ -407,45 +378,6 @@
 
             e.name === 'menu' ? (e.name = "close", list.classList.add('top-[80px]'), list.classList.add('opacity-100'))
             : (e.name = "menu", list.classList.remove('top-[80px]'), list.classList.remove('opacity-100'));
-        }
-
-        document.getElementById('services-button').addEventListener('click', function() {
-            toggleNotification('services-button');
-        });
-
-        document.getElementById('aboutus-button').addEventListener('click', function() {
-            toggleNotification('aboutus-button');
-        });
-
-        document.getElementById('dev-button').addEventListener('click', function() {
-            toggleNotification('dev-button');
-        });
-
-        document.getElementById('pricing-button').addEventListener('click', function() {
-            toggleNotification('pricing-button');
-        });
-
-        document.getElementById('works-button').addEventListener('click', function() {
-            toggleNotification('works-button');
-        });
-
-        document.getElementById('programs-button').addEventListener('click', function() {
-            toggleNotification('programs-button');
-        });
-
-        function toggleNotification(buttonId) {
-            const button = document.getElementById(buttonId);
-            const notification = document.getElementById('notification');
-
-            const action = button.getAttribute('data-action');
-            
-            if (action === 'show') {
-                notification.classList.remove('hidden');
-                button.setAttribute('data-action', 'hide');
-            } else {
-                notification.classList.add('hidden');
-                button.setAttribute('data-action', 'show');
-            }
         }
 
         document.getElementById('scroll-left').addEventListener('click', function() {
